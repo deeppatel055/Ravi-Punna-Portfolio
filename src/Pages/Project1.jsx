@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../Component/Navbar/Navbar'
 import SwipeableImageGallery from '../Component/Swappable/SwipeableImageGallery '
-import ProjectImage1 from '../assets/Project1/1.png'
-import ProjectImage2 from '../assets/Project1/2.png'
-import ProjectImage3 from '../assets/Project1/3.png'
-import ProjectImage4 from '../assets/Project1/4.png'
-import ProjectImage5 from '../assets/Project1/5.png'
-import ProjectImage6 from '../assets/Project1/6.png'
-import ProjectImage7 from '../assets/Project1/7.png'
+import ProjectImage1 from '../assets/Project1/image1.png'
+import ProjectImage2 from '../assets/Project1/image2.png'
+import ProjectImage3 from '../assets/Project1/image3.png'
+import ProjectImage4 from '../assets/Project1/image4.png'
+import ProjectImage5 from '../assets/Project1/image5.png'
+import ProjectImage6 from '../assets/Project1/image6.png'
+import ProjectImage7 from '../assets/Project1/image7.png'
 
 const images = [ProjectImage1, ProjectImage2, ProjectImage3, ProjectImage4, ProjectImage5, ProjectImage6, ProjectImage7];
 

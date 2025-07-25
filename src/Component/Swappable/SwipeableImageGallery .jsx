@@ -8,10 +8,7 @@ const SwipeableImageGallery = ({ images = [], content }) => {
     const [translateX, setTranslateX] = useState(0);
     const containerRef = useRef(null);
 
-    const goToSlide = (index) => {
-        setCurrentIndex(Math.max(0, Math.min(index, images.length - 1)));
-        setTranslateX(0);
-    };
+    
 
     const nextSlide = () => {
         if (currentIndex < images.length - 1) {
@@ -129,7 +126,7 @@ const SwipeableImageGallery = ({ images = [], content }) => {
 
                 </div>
             </div>
-            <div className='mt-10 text-base sm:text-lg leading-relaxed text-[#4a5568]'      style={{ fontFamily: 'Lato' }}>
+            <div className='mt-10 text-base text-justify sm:text-lg leading-relaxed text-[#4a5568]'      style={{ fontFamily: 'Lato' }}>
                 {content}
             </div>
         </div>

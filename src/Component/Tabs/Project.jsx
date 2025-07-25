@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import project1 from './../../assets/Project1/1.png'
-import project2 from './../../assets/project2.png'
-import project3 from './../../assets/project3.png'
-import project4 from './../../assets/project4.png'
+import project1 from './../../assets/Project1/image1.png'
+import project2 from './../../assets/Project2/image1.png'
+import project3 from './../../assets/Project3/image1.png'
+import project4 from './../../assets/Project4/image1.png'
 import { ExternalLink } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
@@ -59,22 +59,6 @@ const ProjectCard = ({
                 style={delayStyle}
             >
                 <div className='relative overflow-hidden rounded-2xl shadow-lg mb-4 group cursor-pointer'>
-                    {/* <a href={project.link}>
-                        <div className='flex transition-transform duration-500 ease-in-out'>
-                            <img
-                                src={project.image}
-                                alt={project.alt}
-                                className='w-full h-full flex-shrink-0 bg-gray-50 transition-all duration-300 group-hover:blur-sm group-hover:scale-110'
-                            />
-                        </div>
-                        <div className={`absolute inset-0 backdrop-blur-md bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
-                            <span className={`${project.textColor} text-xl md:text-3xl font-bold`}
-                                style={{ fontFamily: 'Lato' }}
-                            >
-                                Click me
-                            </span>
-                        </div>
-                    </a> */}
                     <Link to={project.link}>
                         <div className='flex transition-transform duration-500 ease-in-out'>
                             <img
@@ -191,7 +175,7 @@ const Project = () => {
             alt: 'To Do Web Application',
             title: 'To Do web',
             description: 'Designed and developed a responsive and secure To-Do web app to create, update, and track daily tasks through a simple interface.',
-            link: 'project-management',
+            link: 'to-do',
             externalLink: 'https://deeppatel055.github.io/Taskly/',
             textColor: 'text-black'
         },
@@ -200,7 +184,7 @@ const Project = () => {
             alt: 'Movie Website',
             title: 'Movie Website',
             description: 'Designed and developed a dynamic movie website to browse, search, and watch trailers with detailed information on the latest and popular films.',
-            link: 'project-management',
+            link: 'moviebly',
             externalLink: 'https://deeppatel055.github.io/moviebly/',
             textColor: 'text-white'
         }

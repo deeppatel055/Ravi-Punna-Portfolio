@@ -5,6 +5,8 @@ import Navbar from './Component/Navbar/Navbar'
 import Project1 from './Pages/Project1';
 import Project2 from './Pages/Project2';
 import ScrollToTop from './common/ScrollToTop';
+import Project3 from './Pages/Project3';
+import Project4 from './Pages/Project4';
 
 function App() {
  return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<HeroSection />} />
         <Route path="/project-management" element={<Project1 />} />
         <Route path="/milk-dairy" element={<Project2 />} />
+        <Route path="/to-do" element={<Project3 />} />
+        <Route path="/moviebly" element={<Project4 />} />
        </Routes>
     </Router>  
  )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ExperienceSection = () => {
     const [expandedItems, setExpandedItems] = useState({});
@@ -20,7 +21,8 @@ const ExperienceSection = () => {
                 "Gained exposure to code editing tools and development best practices"
             ],
             technologies: ["HTML", "CSS", "JavaScript", "Python"],
-            companyUrl: "https://www.pyonix.in/"
+            companyUrl: "https://www.pyonix.in/",
+            status:'completed'
         },
 
         {
@@ -38,7 +40,8 @@ const ExperienceSection = () => {
                 "Understood the basics of data-driven decision-making and reporting"
             ],
             technologies: ["Excel", "Python ", "Numpy", "Pandas", "Matplotlib", "Seaborn", "SQL", "Power BI"],
-            companyUrl: "https://www.pyonix.in/"
+            companyUrl: "https://www.pyonix.in/",
+            status:'completed'
 
         },
         {
@@ -56,7 +59,8 @@ const ExperienceSection = () => {
                 "Gaining practical experience with full-stack architecture and project deployment"
             ],
             technologies: ["React", "Typescript", "Node", "Tailwind CSS", "Material UI", "Mongo DB", "SQL", "Postgre SQL"],
-            companyUrl: "https://www.nrcrew.com/"
+            companyUrl: "https://www.nrcrew.com/",
+            status:'active'
         }
 
     ];
@@ -80,7 +84,13 @@ const ExperienceSection = () => {
                     {experiences.map((exp) => (
                         <div key={exp.id} className="relative mb-12 last:mb-0">
                             {/* Timeline Dot */}
-                            <div className="absolute left-6 w-4 h-4 bg-[#2d3748] rounded-full border-4 border-white shadow-lg z-10"></div>
+                           <div className="absolute left-6 w-4 h-4 rounded-full border-4 border-white shadow-lg z-10 transition-all duration-100 bg-[#2d3748] ">
+                               {exp.status === 'active' && (
+                                <div className='absolute -inset-1.5 bg-[#2d3748] rounded-full animate-ping '>
+                                    
+                                </div>
+                               )}
+                            </div>
 
                             {/* Experience Card */}
                             <div className="ml-20 bg-[#2d3748] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -94,7 +104,7 @@ const ExperienceSection = () => {
                                             </h3>
                                             <div className="flex items-center gap-2 text-[#e6e6e6] text-base sm:text-lg  mb-2 hover:underline" style={{ fontFamily: 'Lato' }}>
                                                 <span>{exp.company}</span>
-                                                <ExternalLink className="w-4 h-4" />
+                                               <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer"> <ExternalLink className="w-4 h-4" /></a>
                                             </div>
                                         </div>
                                         <span className="inline-block px-3 py-1 bg-[#e6e6e6] text-[#2d3748]text-base sm:text-lg  rounded-full " style={{ fontFamily: 'Lato' }}>

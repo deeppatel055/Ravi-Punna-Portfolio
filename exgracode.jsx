@@ -1,230 +1,207 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Calendar, MapPin, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 
-const Footer = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
+const ExperienceSection = () => {
+    const [expandedItems, setExpandedItems] = useState({});
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
+    const experiences = [
+        {
+            id: 1,
+            title: "Web Development Intern",
+            company: "Pyonix Technology",
+            location: "Ahmadabad, Gujarat, IN",
+            duration: "Jul 2025 (15-day Internship)",
+            type: "Internship",
+            status: "completed",
+            description: "Completed a short-term internship focused on learning the fundamentals of web development. Gained introductory experience with core frontend technologies and basic Python programming.",
+            achievements: [
+                "Learned the basics of HTML and CSS for structuring and styling web pages",
+                "Explored basic JavaScript for adding simple interactivity",
+                "Practiced writing simple Python scripts and understanding core concepts",
+                "Gained exposure to code editing tools and development best practices"
+            ],
+            technologies: ["HTML", "CSS", "JavaScript", "Python"],
+            companyUrl: "https://www.pyonix.in/"
+        },
+
+        {
+            id: 2,
+            title: "Data Analyst Intern",
+            company: "Pyonix Technology",
+            location: "Ahmadabad, Gujarat, IN",
+            duration: "Sep 2024 - Dec 2024",
+            type: "Internship",
+            status: "completed",
+            description: "Completed a 4-month internship focused on learning the fundamentals of data analysis. Gained hands-on experience with spreadsheet tools, basic Python for data handling, and introductory data visualization techniques.",
+            achievements: [
+                "Learned to clean and organize datasets using Excel and Python",
+                "Explored basic data analysis techniques such as filtering, grouping, and summarizing",
+                "Created simple charts and graphs to visualize data insights",
+                "Understood the basics of data-driven decision-making and reporting"
+            ],
+            technologies: ["Excel", "Python ", "Numpy", "Pandas", "Matplotlib", "Seaborn", "SQL", "Power BI"],
+            companyUrl: "https://www.pyonix.in/"
+
+        },
+        {
+            id: 3,
+            title: "MERN Stack Developer Intern",
+            company: "N R CREW Software Development Company",
+            location: "Remote",
+            duration: "Feb 2025 - Present",
+            type: "Internship",
+            status: "active",
+            description: "Currently undergoing a 6-month internship focused on full-stack web development using the MERN (MongoDB, Express.js, React, Node.js) stack. Building real-world applications and improving skills in both frontend and backend technologies.",
+            achievements: [
+                "Developing responsive web applications using React and Tailwind CSS",
+                "Creating RESTful APIs with Node.js and Express.js",
+                "Working with MongoDB for data storage and retrieval",
+                "Gaining practical experience with full-stack architecture and project deployment"
+            ],
+            technologies: ["React", "Typescript", "Node", "Tailwind CSS", "Material UI", "Mongo DB", "SQL", "Postgre SQL"],
+            companyUrl: "https://www.nrcrew.com/"
+        }
+
+    ];
+
+    const toggleExpand = (id) => {
+        setExpandedItems(prev => ({
+            ...prev,
+            [id]: !prev[id]
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Add your form submission logic here
-        alert('Message sent successfully!');
-        // Reset form
-        setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        });
-    };
-
     return (
-        <footer className='mt-16 md:mt-20'>
-            <div className='flex flex-col lg:flex-row justify-between gap-8 lg:gap-12'>
-                <div className='flex-1'>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2d3748] leading-tight"
-                        style={{ fontFamily: 'Lato' }}>
-                        Let's Connect & Develop
-                    </h1>
-                    <p className="mt-3 md:mt-4 text-base sm:text-lg leading-relaxed text-[#4a5568]"
-                        style={{ fontFamily: 'Lato' }}>
-                        Let's create digital solutions that speak to your audience.
-                    </p>
+        <section>
+            <div className="max-w-4xl mx-auto">
+
+                {/* Experience Timeline */}
+                <div className="relative">
+                    {/* Timeline Line */}
+                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#2d3748]"></div>
+
+                    {experiences.map((exp) => (
+                        <div key={exp.id} className="relative mb-12 last:mb-0">
+                            {/* Timeline Dot with Active Animation */}
+                            <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-white shadow-lg z-10 transition-all duration-500 ${
+                                exp.status === 'active' 
+                                    ? 'bg-green-500 animate-pulse scale-125 shadow-green-500/50' 
+                                    : 'bg-[#2d3748]'
+                            }`}>
+                                {/* Active status ring animation */}
+                                {exp.status === 'active' && (
+                                    <>
+                                        <div className="absolute -inset-2 bg-green-500/20 rounded-full animate-ping"></div>
+                                        <div className="absolute -inset-1 bg-green-500/30 rounded-full animate-pulse"></div>
+                                    </>
+                                )}
+                            </div>
+
+                            {/* Experience Card */}
+                            <div className={`ml-20 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border overflow-hidden ${
+                                exp.status === 'active' 
+                                    ? 'bg-[#1a2332] border-green-500/30 shadow-green-500/10' 
+                                    : 'bg-[#2d3748] border-gray-100'
+                            }`}>
+                                <div className="p-6">
+                                    {/* Header */}
+                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                        <div>
+                                            <h3 className="text-2xl font-bold text-[#e6e6e6] mb-1"
+                                            style={{ fontFamily: 'Lato' }}>
+                                                {exp.title}
+                                            </h3>
+                                            <div className="flex items-center gap-2 text-[#e6e6e6] text-base sm:text-lg mb-2 hover:underline" style={{ fontFamily: 'Lato' }}>
+                                                <span>{exp.company}</span>
+                                               <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer"> <ExternalLink className="w-4 h-4" /></a>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <span className={`inline-block px-3 py-1 text-base sm:text-lg rounded-full transition-all duration-300 ${
+                                                exp.status === 'active' 
+                                                    ? 'bg-green-500 text-white animate-pulse' 
+                                                    : 'bg-[#e6e6e6] text-[#2d3748]'
+                                            }`} style={{ fontFamily: 'Lato' }}>
+                                                {exp.type}
+                                            </span>
+                                            {exp.status === 'active' && (
+                                                <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {/* Meta Info */}
+                                    <div className="flex flex-wrap gap-4 mb-4 text-base sm:text-lg text-[#e6e6e6]" style={{ fontFamily: 'Lato' }}>
+                                        <div className="flex items-center gap-1">
+                                            <Calendar className="w-4 h-4" />
+                                            <span>{exp.duration}</span>
+                                        </div>
+                                        <div className="flex items-center gap-1">
+                                            <MapPin className="w-4 h-4" />
+                                            <span>{exp.location}</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Description */}
+                                    <p className="text-[#e6e6e6] mb-4 text-base sm:text-lg leading-relaxed" style={{ fontFamily: 'Lato' }}>
+                                        {exp.description}
+                                    </p>
+
+                                    {/* Technologies */}
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {exp.technologies.map((tech, techIndex) => (
+                                            <span
+                                                key={techIndex}
+                                                className="px-3 py-1 bg-[#e6e6e6] text-[#2d3748] text-base sm:text-lg rounded-full hover:bg-gray-200 transition-colors" style={{ fontFamily: 'Lato' }}
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    {/* Expand/Collapse Button */}
+                                    <button
+                                        onClick={() => toggleExpand(exp.id)}
+                                        className="flex items-center gap-2 text-[#e6e6e6] hover:underline text-base sm:text-lg transition-colors" style={{ fontFamily: 'Lato' }}
+                                    >
+                                        <span className=''>
+                                            {expandedItems[exp.id] ? 'Hide' : 'Show'} Key Achievements
+                                        </span>
+                                        {expandedItems[exp.id] ? (
+                                            <ChevronUp className="w-4 h-4" />
+                                        ) : (
+                                            <ChevronDown className="w-4 h-4" />
+                                        )}
+                                    </button>
+
+                                    {/* Expandable Achievements */}
+                                    {expandedItems[exp.id] && (
+                                        <div className="mt-4 pt-4 border-t border-gray-100 animate-in slide-in-from-top-2 duration-300">
+                                            <h4 className="text-base sm:text-lg text-[#e6e6e6] mb-3" style={{ fontFamily: 'Lato' }}>Key Achievements:</h4>
+                                            <ul className="space-y-2">
+                                                {exp.achievements.map((achievement, achIndex) => (
+                                                    <li
+                                                        key={achIndex}
+                                                        className="flex items-start gap-3 text-base sm:text-lg text-[#e6e6e6]" style={{ fontFamily: 'Lato' }}
+                                                    >
+                                                        <div className="w-2 h-2 bg-[#e6e6e6] rounded-full mt-2 flex-shrink-0"></div>
+                                                        <span>{achievement}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                
-                <div className='flex-1 max-w-md lg:max-w-lg'>
-                    <form onSubmit={handleSubmit} className='space-y-4'>
-                        <div>
-                            <label htmlFor="name" className='block text-sm font-medium text-[#2d3748] mb-2' 
-                                   style={{ fontFamily: 'Lato' }}>
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleInputChange}
-                                required
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-[#2d3748]'
-                                style={{ fontFamily: 'Lato' }}
-                                placeholder="Your name"
-                            />
-                        </div>
 
-                        <div>
-                            <label htmlFor="email" className='block text-sm font-medium text-[#2d3748] mb-2'
-                                   style={{ fontFamily: 'Lato' }}>
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                required
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-[#2d3748]'
-                                style={{ fontFamily: 'Lato' }}
-                                placeholder="your.email@example.com"
-                            />
-                        </div>
+                {/* Call to Action */}
 
-                        <div>
-                            <label htmlFor="subject" className='block text-sm font-medium text-[#2d3748] mb-2'
-                                   style={{ fontFamily: 'Lato' }}>
-                                Subject
-                            </label>
-                            <input
-                                type="text"
-                                id="subject"
-                                name="subject"
-                                value={formData.subject}
-                                onChange={handleInputChange}
-                                required
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-[#2d3748]'
-                                style={{ fontFamily: 'Lato' }}
-                                placeholder="What's this about?"
-                            />
-                        </div>
-
-                        <div>
-                            <label htmlFor="message" className='block text-sm font-medium text-[#2d3748] mb-2'
-                                   style={{ fontFamily: 'Lato' }}>
-                                Message
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleInputChange}
-                                required
-                                rows="4"
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-vertical text-[#2d3748]'
-                                style={{ fontFamily: 'Lato' }}
-                                placeholder="Tell me about your project..."
-                            />
-                        </div>
-
-                        <button
-                            type="submit"
-                            className='w-full bg-[#2d3748] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#4a5568] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200'
-                            style={{ fontFamily: 'Lato' }}
-                        >
-                            Send Message
-                        </button>
-                    </form>
-                </div>
             </div>
-        </footer>
-    )
-}
-
-export default Footer
-
-
-
-
-import { useState } from 'react';
-
-const Skill = () => {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setCursorPos({
-      x: e.clientX - rect.left - 10, // center circle
-      y: e.clientY - rect.top - 10,
-    });
-  };
-
-  return (
-    <div
-      className="relative w-96 h-96 bg-gray-200 rounded-lg overflow-hidden "
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
-      {isHovering && (
-        <div
-          className="absolute w-19 h-19 bg-blue-400 opacity-60 rounded-full pointer-events-none transition-transform duration-75"
-          style={{
-            transform: `translate(${cursorPos.x}px, ${cursorPos.y}px)`,
-          }}
-        />
-      )}
-      <div className="flex justify-center items-center h-full text-lg font-semibold bg-black text-gray-700">
-        Hover me ✨
-      </div>
-      <div className="flex justify-center items-center h-full text-lg font-semibold bg-black text-gray-700">
-        Hover me ✨
-      </div>
-    </div>
-  );
+        </section>
+    );
 };
 
-export default Skill;
-
-
-
-import React, { useState } from 'react'
-
-const Skill = () => {
-    const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-    const [isHovering, setIsHovering] = useState(false);
-
-    const handleMouseMove = (e) => {
-        const rect = e.currentTarget.getBoundingClientReact();
-        setCursorPos({
-            x: e.clientX - rect.left - 10,
-            x: e.clientX - rect.top - 10,
-        })
-    }
-    return (
-        <div className="flex flex-wrap text-center gap-x-4 gap-y-4">
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]"
-                onMouseMove={handleMouseMove}
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)}
-            >
-                {isHovering && (
-                    <div
-                        className="absolute w-19 h-19 bg-blue-400 opacity-60 rounded-full pointer-events-none transition-transform duration-75"
-                        style={{
-                            transform: `translate(${cursorPos.x}px, ${cursorPos.y}px)`,
-                        }}
-                    />
-                )}
-                <div className="flex justify-center items-center h-full text-lg font-semibold bg-black text-gray-700">HTML</div>
-
-            </div>
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 2</div>
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 3</div>
-
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 1</div>
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 2</div>
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 3</div>
-
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 1</div>
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 2</div>
-            <div className="w-full md:w-[32%] p-4 bg-[#2d3748] text-[#e6e6e6]">Column 3</div>
-        </div>
-
-
-    )
-}
-
-export default Skill
+export default ExperienceSection;

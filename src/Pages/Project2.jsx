@@ -38,8 +38,6 @@ const Project2 = () => {
     <>
       <Navbar title="Milk Dairy" />
       <SwipeableImageGallery images={images} content={content} />
-
-
     </>
   )
 }
