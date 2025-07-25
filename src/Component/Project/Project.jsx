@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import project1 from './../../assets/Project1/1.png'
 import project2 from './../../assets/project2.png'
 import project3 from './../../assets/project3.png'
@@ -44,8 +45,8 @@ const ProjectCard = ({
     const [ref, isVisible] = useIntersectionObserver();
 
     const baseClasses = `transform transition-all duration-1000 ease-out ${isVisible
-            ? 'translate-y-0 opacity-100'
-            : 'translate-y-20 opacity-0'
+        ? 'translate-y-0 opacity-100'
+        : 'translate-y-20 opacity-0'
         }`;
 
     const delayStyle = { transitionDelay: `${delay}ms` };
@@ -58,7 +59,7 @@ const ProjectCard = ({
                 style={delayStyle}
             >
                 <div className='relative overflow-hidden rounded-2xl shadow-lg mb-4 group cursor-pointer'>
-                    <a href={project.link}>
+                    {/* <a href={project.link}>
                         <div className='flex transition-transform duration-500 ease-in-out'>
                             <img
                                 src={project.image}
@@ -73,7 +74,22 @@ const ProjectCard = ({
                                 Click me
                             </span>
                         </div>
-                    </a>
+                    </a> */}
+                    <Link to={project.link}>
+                        <div className='flex transition-transform duration-500 ease-in-out'>
+                            <img
+                                src={project.image}
+                                alt={project.alt}
+                                className='w-full h-full flex-shrink-0 bg-gray-50 transition-all duration-300 group-hover:blur-sm group-hover:scale-110'
+                            />
+                        </div>
+                        <div className='absolute inset-0 backdrop-blur-md bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                            <span className={`${project.textColor || 'text-black'} text-xl md:text-3xl font-bold`} style={{ fontFamily: 'Lato' }}>
+                                Click me
+                            </span>
+                        </div>
+                    </Link>
+
                 </div>
 
                 <div className='flex flex-col justify-start'>
@@ -110,7 +126,8 @@ const ProjectCard = ({
         >
             <div className={`w-full lg:w-[70%] flex-shrink-0 relative ${isReversed ? 'order-1 lg:order-2' : ''}`}>
                 <div className='relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer'>
-                    <a href={project.link}>
+                    <Link to={project.link}>
+
                         <div className='flex transition-transform duration-500 ease-in-out'>
                             <img
                                 src={project.image}
@@ -125,7 +142,7 @@ const ProjectCard = ({
                                 Click me
                             </span>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -155,7 +172,7 @@ const Project = () => {
             alt: 'Project Management Dashboard',
             title: 'Project Management',
             description: 'Designed and developed a full-featured project management website with task tracking, project organization, and an admin panel for user role management.',
-            link: '/project-management',
+            link: 'project-management',
             comingSoon: true
         },
         {
@@ -163,7 +180,7 @@ const Project = () => {
             alt: 'Milk Dairy E-commerce',
             title: 'Milk Dairy',
             description: 'Designed and developed an e-commerce website specializing in dairy-based products, offering a seamless shopping experience for fresh, high-quality items.',
-            link: '/milk-dairy',
+            link: 'milk-dairy',
             comingSoon: true
         }
     ];
@@ -174,7 +191,7 @@ const Project = () => {
             alt: 'To Do Web Application',
             title: 'To Do web',
             description: 'Designed and developed a responsive and secure To-Do web app to create, update, and track daily tasks through a simple interface.',
-            link: '/project-management',
+            link: 'project-management',
             externalLink: 'https://deeppatel055.github.io/Taskly/',
             textColor: 'text-black'
         },
@@ -183,7 +200,7 @@ const Project = () => {
             alt: 'Movie Website',
             title: 'Movie Website',
             description: 'Designed and developed a dynamic movie website to browse, search, and watch trailers with detailed information on the latest and popular films.',
-            link: '/project-management',
+            link: 'project-management',
             externalLink: 'https://deeppatel055.github.io/moviebly/',
             textColor: 'text-white'
         }
