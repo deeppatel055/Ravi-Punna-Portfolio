@@ -82,55 +82,82 @@ const SwipeableImageGallery = ({ images = [], content }) => {
         );
     }
 
-    return (
-        <div className='w-full mx-auto max-w-7xl'>
 
-            <div className=' bg-[#2d3748] mt-19 rounded-xl overflow-hidden shadow-2xl'>
+  return (
+    <div className='w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+      <div className='bg-[#2d3748] mt-19 sm:mt-19 lg:mt-19 rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-2xl'>
+        <div 
+          ref={containerRef} 
+          className='relative h-[250px] xs:h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden cursor-grab active:cursor-grabbing select-none touch-pan-y' 
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
+          <div 
+            className='flex h-full transition-transform duration-300 ease-out' 
+            style={{
+              transform: `translateX(calc(-${currentIndex * 100}% + ${isDragging ? translateX : 0}px))`,
+            }}
+          >
+            {images.map((src, index) => (
+              <div key={index} className='w-full h-full flex-shrink-0'>
+                <img 
+                  src={src}
+                  alt={`Slide ${index + 1}`}
+                  className='w-full h-full'
+                  draggable={false}
+                />
+              </div>
+            ))}
+          </div>
 
-                <div ref={containerRef} className='relative h-[600px] overflow-hidden cursor-grab active:cursor-grabbing select-none' onMouseDown={handleMouseDown}
-                    onMouseMove={handleMouseMove}
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}>
-                    <div className='flex h-full transition-transform duration-300 ease-out' style={{
-                        transform: `translateX(calc(-${currentIndex * 100}% + ${isDragging ? translateX : 0}px))`,
-                    }}>
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            disabled={currentIndex === 0}
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 disabled:opacity-30 disabled:cursor-not-allowed text-white p-1.5 sm:p-2 rounded-full transition-all backdrop-blur-sm z-10"
+          >
+            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            disabled={currentIndex === images.length - 1}
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 disabled:opacity-30 disabled:cursor-not-allowed text-white p-1.5 sm:p-2 rounded-full transition-all backdrop-blur-sm z-10"
+          >
+            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+          </button>
 
-                        {images.map((src, index) => (
-                            <div key={index} className='w-full h-full flex-shrink-0'>
-                                <img src={src}
-                                    alt={`Slide ${index + 1}`}
-                                    className='w-full h-full '
-                                />
+          {/* Counter */}
+          <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-black/50 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm backdrop-blur-sm z-10">
+            {currentIndex + 1} / {images.length}
+          </div>
 
-                            </div>
-                        ))}
-
-                    </div>
-                    <button
-                        onClick={prevSlide}
-                        disabled={currentIndex === 0}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 disabled:opacity-30 text-white p-2 rounded-full transition-all backdrop-blur-sm"
-                    >
-                        <ChevronLeft className="w-6 h-6" />
-                    </button>
-                    <button
-                        onClick={nextSlide}
-                        disabled={currentIndex === images.length - 1}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 disabled:opacity-30 text-white p-2 rounded-full transition-all backdrop-blur-sm"
-                    >
-                        <ChevronRight className="w-6 h-6" />
-                    </button>
-                    <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
-                        {currentIndex + 1} / {images.length}
-                    </div>
-
-                </div>
-            </div>
-            <div className='mt-10 text-base text-justify sm:text-lg leading-relaxed text-[#4a5568]'      style={{ fontFamily: 'Lato' }}>
-                {content}
-            </div>
+          {/* Dot Indicators for mobile */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 sm:hidden">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentIndex ? 'bg-white' : 'bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
         </div>
-    )
-}
+      </div>
 
-export default SwipeableImageGallery 
+      {/* Content Section */}
+      <div className='mt-6 sm:mt-8 lg:mt-10'>
+        <div className='text-sm sm:text-base lg:text-lg leading-relaxed text-[#4a5568] text-justify px-2 sm:px-0' 
+             style={{ fontFamily: 'Lato, sans-serif' }}>
+          {content}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SwipeableImageGallery;
