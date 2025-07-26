@@ -156,7 +156,7 @@ const Project = () => {
             alt: 'Project Management Dashboard',
             title: 'Project Management',
             description: 'Designed and developed a full-featured project management website with task tracking, project organization, and an admin panel for user role management.',
-            link: 'project-management',
+            link: '/project/project-management',
             comingSoon: true
         },
         {
@@ -164,7 +164,7 @@ const Project = () => {
             alt: 'Milk Dairy E-commerce',
             title: 'Milk Dairy',
             description: 'Designed and developed an e-commerce website specializing in dairy-based products, offering a seamless shopping experience for fresh, high-quality items.',
-            link: 'milk-dairy',
+            link: '/project/milk-dairy',
             comingSoon: true
         }
     ];
