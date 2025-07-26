@@ -175,7 +175,7 @@ const Project = () => {
             alt: 'To Do Web Application',
             title: 'To Do web',
             description: 'Designed and developed a responsive and secure To-Do web app to create, update, and track daily tasks through a simple interface.',
-            link: 'to-do',
+            link: '/project/to-do',
             externalLink: 'https://deeppatel055.github.io/Taskly/',
             textColor: 'text-black'
         },
@@ -184,7 +184,7 @@ const Project = () => {
             alt: 'Movie Website',
             title: 'Movie Website',
             description: 'Designed and developed a dynamic movie website to browse, search, and watch trailers with detailed information on the latest and popular films.',
-            link: 'moviebly',
+            link: '/project/moviebly',
             externalLink: 'https://deeppatel055.github.io/moviebly/',
             textColor: 'text-white'
         }
