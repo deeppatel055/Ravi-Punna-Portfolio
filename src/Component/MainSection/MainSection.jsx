@@ -3,7 +3,6 @@ import React, { useRef } from 'react'
 import photo from '../../assets/photo.jpg';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import Resume from '../../../public/Deep_Patel_Resume.pdf'
 
 const Mainsection = () => {
 
@@ -107,7 +106,7 @@ const Mainsection = () => {
           </p>
           <a
             ref={resumeRef}
-            href={Resume}
+           href="/Deep_Patel_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-6 py-2 bg-[#2d3748] text-white rounded-lg hover:bg-[#4a5568] transition-colors duration-300"

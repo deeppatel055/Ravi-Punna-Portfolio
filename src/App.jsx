@@ -33,7 +33,7 @@ import ScrollToTop from './common/ScrollToTop';
 
 function App() {
   return (
-    <Router>
+    <Router  basename="/Deep-Patel-Portfolio">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HeroSection />} />
