@@ -1,18 +1,4 @@
-// import React from 'react'
-
-// const Service = () => {
-//     return (
-//         <div className='max-w-6xl mx-auto px-4'>
-
-//             Services
-//         </div>
-//     )
-// }
-
-// export default Service
-
-import React from 'react';
-import { Code, Globe, ShoppingCart, Settings, ChevronRight, Zap, Palette, Database, Shield } from 'lucide-react';
+import { Code,  ShoppingCart, Settings,  Database,  } from 'lucide-react';
 
 const Service = () => {
 

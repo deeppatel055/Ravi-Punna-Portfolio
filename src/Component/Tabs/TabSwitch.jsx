@@ -12,7 +12,6 @@ const TabSwitch = () => {
     const tabContentRef = useRef(null);
     const containerRef = useRef(null);
 
-    // Page load animation effect
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoaded(true);
@@ -21,7 +20,6 @@ const TabSwitch = () => {
         return () => clearTimeout(timer);
     }, []);
 
-    // Scroll-triggered animation effect
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -29,14 +27,13 @@ const TabSwitch = () => {
                     if (entry.isIntersecting) {
                         setIsVisible(true);
                     } else {
-                        // Optional: Reset animation when scrolling away
                         // setIsVisible(false);
                     }
                 });
             },
             {
-                threshold: 0.1, // Trigger when 10% of the element is visible
-                rootMargin: '0px 0px -50px 0px' // Start animation 50px before element enters viewport
+                threshold: 0.1, 
+                rootMargin: '0px 0px -50px 0px' 
             }
         );
 
@@ -53,11 +50,9 @@ const TabSwitch = () => {
 
     const handleTabClick = (tabId) => {
         if (tabId !== activeTab) {
-            // Exit animation for current content
             const tabContent = tabContentRef.current;
 
             if (tabContent) {
-                // Simple fade animation since GSAP isn't available
                 tabContent.style.opacity = '0';
                 tabContent.style.transform = 'translateY(-10px)';
 
@@ -70,7 +65,6 @@ const TabSwitch = () => {
         }
     };
 
-    // Entry animation effect for tab content
     useEffect(() => {
         const tabContent = tabContentRef.current;
         if (tabContent && (isLoaded || isVisible)) {
@@ -85,7 +79,6 @@ const TabSwitch = () => {
         }
     }, [activeTab, isLoaded, isVisible]);
 
-    // Check if component should be animated (either loaded or visible on scroll)
     const shouldAnimate = isLoaded || isVisible;
 
     return (
@@ -97,7 +90,6 @@ const TabSwitch = () => {
                     : 'opacity-0 translate-y-8'
             }`}
         >
-            {/* Tab buttons with staggered animation */}
             <div className='flex flex-col sm:flex-row justify-center'>
                 {tabs.map((tab, index) => (
                     <button
@@ -113,7 +105,7 @@ const TabSwitch = () => {
                                 : 'opacity-0 translate-y-4'
                         }`}
                         style={{ 
-                            fontFamily: 'Roboto',
+                            fontFamily: 'Lato',
                             transitionDelay: shouldAnimate ? `${index * 100}ms` : '0ms'
                         }}
                     >
@@ -122,7 +114,6 @@ const TabSwitch = () => {
                 ))}
             </div>
 
-            {/* Tab content with delayed animation */}
             <div
                 ref={tabContentRef}
                 className={`mt-8 rounded-lg min-h-[200px] transition-all duration-500 ${

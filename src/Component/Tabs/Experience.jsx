@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const ExperienceSection = () => {
     const [expandedItems, setExpandedItems] = useState({});

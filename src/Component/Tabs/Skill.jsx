@@ -1,6 +1,4 @@
-
-
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const Skill = () => {
     const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
