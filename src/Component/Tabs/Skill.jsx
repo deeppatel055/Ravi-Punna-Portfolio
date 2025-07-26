@@ -8,19 +8,19 @@ const Skill = () => {
 
     const skills = [
         { name: 'HTML', },
-        { name: 'CSS',},
+        { name: 'CSS', },
         { name: 'JavaScript', },
-        { name: 'BOOTSTRAP',},
+        { name: 'BOOTSTRAP', },
         { name: 'TAILWIND', },
-        { name: 'MUI',},
-        { name: 'REACT.JS',},
+        { name: 'MUI', },
+        { name: 'REACT.JS', },
         { name: 'NODE.JS', },
-        { name: 'EXPRESS.JS'},
-        { name: 'MONGO DB'},
-        { name: 'SQL'},
-        { name: 'POSTGRE SQL'},
-        { name: 'PYTHON'},
-        { name: 'REST API'},
+        { name: 'EXPRESS.JS' },
+        { name: 'MONGO DB' },
+        { name: 'SQL' },
+        { name: 'POSTGRE SQL' },
+        { name: 'PYTHON' },
+        { name: 'REST API' },
     ];
 
     const handleMouseMove = (e) => {
@@ -36,7 +36,7 @@ const Skill = () => {
             {skills.map((skill, index) => (
                 <div
                     key={index}
-                    className="relative w-full md:w-[32%] p-4 py-7 bg-[#2d3748] text-[#e6e6e6] rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#e6e6e6] hover:text-[#2d3748]"
+                    className="relative w-full md:w-[32%] p-4 py-7 bg-[#7d7d7d2b] text-[#2d3748] rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl  hover:text-[#2d3748]"
                     onMouseMove={(e) => handleMouseMove(e, index)}
                     onMouseEnter={() => setHoveredSkill(index)}
                     onMouseLeave={() => setHoveredSkill(null)}
@@ -52,17 +52,17 @@ const Skill = () => {
 
                     <div className="relative z-10 flex flex-col justify-center items-center h-full">
 
-                        <div className="text-xl font-semibold text-center"  style={{
-                        fontFamily: 'Lato',
-                    }}>{skill.name}</div>
+                        <div className="text-xl font-semibold text-center" style={{
+                            fontFamily: 'Roboto',
+                        }}>{skill.name}</div>
                     </div>
 
                     {/* Subtle gradient overlay */}
-                    <div className={`absolute inset-0 bg-[#e6e6e6] opacity-5 transition-opacity duration-300 ${hoveredSkill === index ? 'opacity-10' : ''}`} />
+                    <div className={`absolute inset-0 bg-[#7d7d7d2b] opacity-5 transition-opacity duration-300 ${hoveredSkill === index ? 'opacity-10' : ''}`} />
 
-                    
+
                 </div>
-            ))} 
+            ))}
         </div>
     );
 };

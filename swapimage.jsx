@@ -14,7 +14,7 @@ const Project = () => {
       >
         <div className="inner relative min-h-[300px]">
           <div className="absolute top-1/2 left-0 w-full h-[5em] -mt-[5em] text-white text-center">
-            <h1 className="m-0 text-[32px] font-normal px-5 font-['Roboto_Slab']">
+            <h1 className="m-0 text-[32px] font-normal px-5 font-['Robotoo_Slab']">
               Choice mountains bro
             </h1>
             <p className="text-sm px-5 font-['Noto_Sans']">
@@ -32,7 +32,7 @@ const Project = () => {
       >
         <div className="inner relative min-h-[300px]">
           <div className="absolute top-1/2 left-0 w-full h-[5em] -mt-[5em] text-white text-center">
-            <h1 className="m-0 text-[32px] font-normal px-5 font-['Roboto_Slab']">
+            <h1 className="m-0 text-[32px] font-normal px-5 font-['Robotoo_Slab']">
               Choice mountains bro
             </h1>
             <p className="text-sm px-5 font-['Noto_Sans']">
@@ -56,7 +56,7 @@ const Project = () => {
       >
         <div className="inner relative min-h-[200px]  bg-repeat">
           <div className="absolute top-1/2 left-0 w-full h-[10em] -mt-[5em] text-white text-center">
-            <h1 className="m-0 text-[32px] font-normal px-5 font-['Roboto_Slab']">
+            <h1 className="m-0 text-[32px] font-normal px-5 font-['Robotoo_Slab']">
               Dem some big ass caves
             </h1>
             <p className="text-sm px-5 font-['Noto_Sans']">
@@ -75,7 +75,7 @@ const Project = () => {
       >
         <div className="inner relative min-h-[200px] bg-repeat">
           <div className="absolute top-1/2 left-0 w-full h-[10em] -mt-[5em] text-white text-center">
-            <h1 className="m-0 text-[32px] font-normal px-5 font-['Roboto_Slab']">
+            <h1 className="m-0 text-[32px] font-normal px-5 font-['Robotoo_Slab']">
               Dem some big ass caves
             </h1>
             <p className="text-sm px-5 font-['Noto_Sans']">

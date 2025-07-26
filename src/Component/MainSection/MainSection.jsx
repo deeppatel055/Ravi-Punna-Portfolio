@@ -1,5 +1,4 @@
 
-
 import React, { useRef } from 'react'
 import photo from '../../assets/photo.jpg';
 import { useGSAP } from '@gsap/react';
@@ -33,6 +32,7 @@ const Mainsection = () => {
       x: -60,
       opacity: 0
     })
+
     gsap.set(resumeRef.current, {
       x: -40,
       opacity: 0
@@ -57,12 +57,13 @@ const Mainsection = () => {
         ease: 'power3.out'
       }, "-=0.6")
 
+      // Animate resume link
       .to(resumeRef.current, {
         x: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.6,
         ease: 'power3.out'
-      }, "-=0.6")
+      }, "-=0.4")
 
       // Animate photo
       .to(photoRef.current, {
@@ -92,27 +93,28 @@ const Mainsection = () => {
           <h1
             ref={headingRef}
             className="text-4xl sm:text-4xl md:text-5xl font-bold text-[#2d3748] leading-tight"
-            style={{ fontFamily: 'Lato' }}
+            style={{ fontFamily: 'Roboto' }}
           >
             I'm a <br /> Web Developer
           </h1>
           <p
             ref={paragraphRef}
-            className="mt-3 md:mt-2 text-base sm:text-lg  text-[#4a5568] leading-relaxed"
-            style={{ fontFamily: 'Lato' }}
+            className="mt-3 md:mt-2 text-base sm:text-lg text-[#4a5568] leading-relaxed"
+            style={{ fontFamily: 'Roboto' }}
           >
             From front-end design to back-end logic, <br className="hidden sm:block" />
             I turn ideas into interactive, high-performing web applications.
           </p>
           <a
             ref={resumeRef}
-
             href={Resume}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 md:mt-2 text-base sm:text-lg  text-[#4a5568] leading-relaxed"
-            style={{ fontFamily: 'Lato' }}>Resume</a>
-
+            className="inline-block mt-4 px-6 py-2 bg-[#2d3748] text-white rounded-lg hover:bg-[#4a5568] transition-colors duration-300"
+            style={{ fontFamily: 'Roboto' }}
+          >
+            Resume
+          </a>
         </div>
 
         <div className="flex-1 flex justify-center">

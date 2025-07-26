@@ -68,7 +68,7 @@ const ProjectCard = ({
                             />
                         </div>
                         <div className='absolute inset-0 backdrop-blur-md bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                            <span className={`${project.textColor || 'text-black'} text-xl md:text-3xl font-bold`} style={{ fontFamily: 'Lato' }}>
+                            <span className={`${project.textColor || 'text-black'} text-xl md:text-3xl font-bold`} style={{ fontFamily: 'Roboto' }}>
                                 Click me
                             </span>
                         </div>
@@ -79,7 +79,7 @@ const ProjectCard = ({
                 <div className='flex flex-col justify-start'>
                     <div className='space-y-3'>
                         <div className='flex items-center gap-2'>
-                            <h3 className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Lato' }}>
+                            <h3 className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
                                 {project.title}
                             </h3>
                             {project.externalLink && (
@@ -88,11 +88,11 @@ const ProjectCard = ({
                                 </a>
                             )}
                         </div>
-                        <p className='text-justify text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Lato' }}>
+                        <p className='text-justify text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
                             {project.description}
                         </p>
                         {project.comingSoon && (
-                            <p className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Lato' }}>
+                            <p className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
                                 Coming Soon...
                             </p>
                         )}
@@ -121,7 +121,7 @@ const ProjectCard = ({
                         </div>
                         <div className='absolute inset-0 backdrop-blur-md bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
                             <span className='text-black text-xl md:text-3xl font-bold'
-                                style={{ fontFamily: 'Lato' }}
+                                style={{ fontFamily: 'Roboto' }}
                             >
                                 Click me
                             </span>
@@ -132,14 +132,14 @@ const ProjectCard = ({
 
             <div className={`w-full lg:w-[30%] flex flex-col justify-start ${isReversed ? 'order-2 lg:order-1' : ''}`}>
                 <div className='space-y-3'>
-                    <h3 className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Lato' }}>
+                    <h3 className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
                         {project.title}
                     </h3>
-                    <p className='text-justify text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Lato' }}>
+                    <p className='text-justify text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
                         {project.description}
                     </p>
                     {project.comingSoon && (
-                        <p className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Lato' }}>
+                        <p className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
                             Coming Soon...
                         </p>
                     )}

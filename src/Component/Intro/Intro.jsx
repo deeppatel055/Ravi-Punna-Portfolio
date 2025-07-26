@@ -104,7 +104,7 @@ const Intro = ({ onComplete }) => {
                 <div className="relative">
                     {/* Main text with enhanced styling */}
                     <div className="relative">
-                        <div className="text-4xl md:text-6xl font-mono mb-4 tracking-wide" style={{ color: '#2d3748', fontFamily: 'Lato' }}>
+                        <div className="text-4xl md:text-6xl font-mono mb-4 tracking-wide" style={{ color: '#2d3748', fontFamily: 'Roboto' }}>
                             <span className="inline-block relative">
                                 {text.split('').map((char, index) => (
                                     <span
@@ -145,7 +145,7 @@ const Intro = ({ onComplete }) => {
                     <div className={`text-lg transition-all duration-700 delay-1000 ${isVisible && !isExiting
                             ? 'translate-y-0 opacity-100'
                             : 'translate-y-4 opacity-0'
-                        }`} style={{ color: '#4a5568', fontFamily: 'Lato' }}>
+                        }`} style={{ color: '#4a5568', fontFamily: 'Roboto' }}>
                         {"Welcome to my portfolio".split('').map((char, index) => (
                             <span
                                 key={index}

@@ -113,7 +113,7 @@ const TabSwitch = () => {
                                 : 'opacity-0 translate-y-4'
                         }`}
                         style={{ 
-                            fontFamily: 'Lato',
+                            fontFamily: 'Roboto',
                             transitionDelay: shouldAnimate ? `${index * 100}ms` : '0ms'
                         }}
                     >

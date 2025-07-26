@@ -80,7 +80,7 @@ const Navbar = ({ title }) => {
       ref={navRef}
       className="text-2xl fixed top-0 left-0 w-full h-16 px-4 bg-[#d3d3d357]
     backdrop-blur-md flex justify-center items-center z-50 text-[#2d3748] font-semibold border-b-2 border-[#7d7d7d2b]"
-      style={{ fontFamily: 'Lato', transform: 'translateY(0%)' }}
+      style={{ fontFamily: 'Roboto', transform: 'translateY(0%)' }}
     >
       <Link to="/" className="hover:underline">{title}</Link>
     </nav>

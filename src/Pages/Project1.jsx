@@ -14,7 +14,7 @@ const images = [ProjectImage1, ProjectImage2, ProjectImage3, ProjectImage4, Proj
 const content = (
     <div className="space-y-4">
         <p>
-            This <b> Project Management website </b>  is a     <b> full-stack application</b> built using <b>React</b> for the frontend, <b> Node.js</b> for the backend, and<b> MySQL</b> as the database. It is designed to help teams manage and monitor their projects and tasks efficiently with real-time updates and intuitive interfaces. The system supports the full lifecycle of a project—from creation to completion—ensuring better organization and visibility across tasks.
+            This  Project Management website   is a      full-stack application built using React for the frontend,  Node.js for the backend, and MySQL as the database. It is designed to help teams manage and monitor their projects and tasks efficiently with real-time updates and intuitive interfaces. The system supports the full lifecycle of a project—from creation to completion—ensuring better organization and visibility across tasks.
         </p>
         
         <p>

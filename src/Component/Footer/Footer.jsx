@@ -139,11 +139,11 @@
 //                     <div className={`flex-1 w-full  xl:w-auto transition-all duration-1200 ease-out  ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-16'
 //                         }`} style={{ transitionDelay: '200ms' }}>
 //                         <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold text-[#2d3748] leading-tight"
-//                             style={{ fontFamily: 'Lato' }}>
+//                             style={{ fontFamily: 'Roboto' }}>
 //                             Let's Connect & Develop
 //                         </h1>
 //                         <p className="mt-2 sm:mt-3 md:mt-4 text-base sm:text-lg text-[#4a5568] leading-relaxed max-w-2xl"
-//                             style={{ fontFamily: 'Lato' }}>
+//                             style={{ fontFamily: 'Roboto' }}>
 //                             Let's create digital solutions that speak to your audience.
 //                         </p>
 
@@ -164,12 +164,12 @@
 //                                             <a
 //                                                 href={info.href}
 //                                                 className="text-[#4a5568] text-base sm:text-lg hover:text-[#2d3748] transition-colors duration-200 block break-all sm:break-normal"
-//                                                 style={{ fontFamily: 'Lato' }}
+//                                                 style={{ fontFamily: 'Roboto' }}
 //                                             >
 //                                                 {info.value}
 //                                             </a>
 //                                         ) : (
-//                                             <p className="text-[#4a5568] text-base sm:text-lg" style={{ fontFamily: 'Lato' }}>
+//                                             <p className="text-[#4a5568] text-base sm:text-lg" style={{ fontFamily: 'Roboto' }}>
 //                                                 {info.value}
 //                                             </p>
 //                                         )}
@@ -219,7 +219,7 @@
 //                                     <label
 //                                         htmlFor="name"
 //                                         className='block text-base sm:text-lg text-[#4a5568] mb-1 sm:mb-2'
-//                                         style={{ fontFamily: 'Lato' }}
+//                                         style={{ fontFamily: 'Roboto' }}
 //                                     >
 //                                         Name
 //                                     </label>
@@ -230,7 +230,7 @@
 //                                         value={formData.name}
 //                                         onChange={handleChange}
 //                                         className='w-full px-3 sm:px-4 py-2 sm:py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-base sm:text-lg '
-//                                         style={{ fontFamily: 'Lato' }}
+//                                         style={{ fontFamily: 'Roboto' }}
 //                                         required
 //                                         placeholder="Your name"
 //                                     />
@@ -240,7 +240,7 @@
 //                                     <label
 //                                         htmlFor="email"
 //                                         className='block text-base sm:text-lg text-[#4a5568] mb-1 sm:mb-2'
-//                                         style={{ fontFamily: 'Lato' }}
+//                                         style={{ fontFamily: 'Roboto' }}
 //                                     >
 //                                         Email
 //                                     </label>
@@ -251,7 +251,7 @@
 //                                         value={formData.email}
 //                                         onChange={handleChange}
 //                                         className='w-full px-3 sm:px-4 py-2 sm:py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-base sm:text-lg '
-//                                         style={{ fontFamily: 'Lato' }}
+//                                         style={{ fontFamily: 'Roboto' }}
 //                                         required
 //                                         placeholder="your.email@example.com"
 //                                     />
@@ -264,7 +264,7 @@
 //                                 <label
 //                                     htmlFor="subject"
 //                                     className='block text-base sm:text-lg text-[#4a5568] mb-1 sm:mb-2'
-//                                     style={{ fontFamily: 'Lato' }}
+//                                     style={{ fontFamily: 'Roboto' }}
 //                                 >
 //                                     Subject
 //                                 </label>
@@ -275,7 +275,7 @@
 //                                     value={formData.subject}
 //                                     onChange={handleChange}
 //                                     className='w-full px-3 sm:px-4 py-2 sm:py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-base sm:text-lg '
-//                                     style={{ fontFamily: 'Lato' }}
+//                                     style={{ fontFamily: 'Roboto' }}
 //                                     required
 //                                     placeholder="What's this about?"
 //                                 />
@@ -287,7 +287,7 @@
 //                                 <label
 //                                     htmlFor="message"
 //                                     className='block text-base sm:text-lg text-[#4a5568] mb-1 sm:mb-2'
-//                                     style={{ fontFamily: 'Lato' }}
+//                                     style={{ fontFamily: 'Roboto' }}
 //                                 >
 //                                     Message
 //                                 </label>
@@ -298,7 +298,7 @@
 //                                     onChange={handleChange}
 //                                     rows="4"
 //                                     className='w-full px-3 sm:px-4 py-2 sm:py-3 border border-[#4a5568] rounded-lg resize-vertical text-[#2d3748] text-base sm:text-lg '
-//                                     style={{ fontFamily: 'Lato' }}
+//                                     style={{ fontFamily: 'Roboto' }}
 //                                     required
 //                                     placeholder="Tell me about your project..."
 //                                 />
@@ -312,7 +312,7 @@
 //                                 className={`w-full bg-[#2d3748] text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-base sm:text-lg transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:bg-[#1a202c] disabled:opacity-70 disabled:cursor-not-allowed ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
 //                                     }`}
 //                                 style={{
-//                                     fontFamily: 'Lato',
+//                                     fontFamily: 'Roboto',
 //                                     transitionDelay: '1000ms'
 //                                 }}
 //                             >
@@ -325,7 +325,7 @@
 //                 <p className={`mt-5 text-center text-base sm:text-lg text-[#4a5568] transition-all duration-800 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
 //                     }`}
 //                     style={{
-//                         fontFamily: 'Lato',
+//                         fontFamily: 'Roboto',
 //                         transitionDelay: '1200ms'
 //                     }}
 //                 >
@@ -477,12 +477,12 @@ const Footer = () => {
                     <div className={`flex-1 w-full lg:w-auto transition-all duration-1200 ease-out ${
                         isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-16'
                     }`} style={{ transitionDelay: '200ms' }}>
-                        <h1 className="text-4xl font-bold text-[#2d3748] leading-tight mb-4"
-                            style={{ fontFamily: 'Lato' }}>
+                        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold text-[#2d3748] leading-tight mb-4"
+                            style={{ fontFamily: 'Roboto' }}>
                             Let's Connect & Develop
                         </h1>
-                        <p className="text-lg text-[#4a5568] leading-relaxed max-w-2xl mb-6"
-                            style={{ fontFamily: 'Lato' }}>
+                        <p className="text-base sm:text-lg  text-[#4a5568] leading-relaxed max-w-2xl mb-6"
+                            style={{ fontFamily: 'Roboto' }}>
                             Let's create digital solutions that speak to your audience.
                         </p>
 
@@ -503,13 +503,13 @@ const Footer = () => {
                                         {info.href ? (
                                             <a
                                                 href={info.href}
-                                                className="text-lg text-[#4a5568] hover:text-[#2d3748] transition-colors duration-200 block break-all"
-                                                style={{ fontFamily: 'Lato' }}
+                                                className="text-base sm:text-lg text-[#4a5568] hover:text-[#2d3748] transition-colors duration-200 block break-all"
+                                                style={{ fontFamily: 'Roboto' }}
                                             >
                                                 {info.value}
                                             </a>
                                         ) : (
-                                            <p className="text-lg text-[#4a5568]" style={{ fontFamily: 'Lato' }}>
+                                            <p className="text-base sm:text-lg text-[#4a5568]" style={{ fontFamily: 'Roboto' }}>
                                                 {info.value}
                                             </p>
                                         )}
@@ -562,8 +562,8 @@ const Footer = () => {
                                 }`} style={{ transitionDelay: '600ms' }}>
                                     <label
                                         htmlFor="name"
-                                        className='block text-lg text-[#4a5568] mb-2'
-                                        style={{ fontFamily: 'Lato' }}
+                                        className='block text-base sm:text-lg text-[#4a5568] mb-2'
+                                        style={{ fontFamily: 'Roboto' }}
                                     >
                                         Name
                                     </label>
@@ -573,8 +573,8 @@ const Footer = () => {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className='w-full px-4 py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
-                                        style={{ fontFamily: 'Lato' }}
+                                        className='w-full px-4 py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
+                                        style={{ fontFamily: 'Roboto' }}
                                         required
                                         placeholder="Your name"
                                     />
@@ -584,8 +584,8 @@ const Footer = () => {
                                 }`} style={{ transitionDelay: '700ms' }}>
                                     <label
                                         htmlFor="email"
-                                        className='block text-lg text-[#4a5568] mb-2'
-                                        style={{ fontFamily: 'Lato' }}
+                                        className='block text-base sm:text-lg text-[#4a5568] mb-2'
+                                        style={{ fontFamily: 'Roboto' }}
                                     >
                                         Email
                                     </label>
@@ -595,8 +595,8 @@ const Footer = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className='w-full px-4 py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
-                                        style={{ fontFamily: 'Lato' }}
+                                        className='w-full px-4 py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
+                                        style={{ fontFamily: 'Roboto' }}
                                         required
                                         placeholder="your.email@example.com"
                                     />
@@ -609,8 +609,8 @@ const Footer = () => {
                             }`} style={{ transitionDelay: '800ms' }}>
                                 <label
                                     htmlFor="subject"
-                                    className='block text-lg text-[#4a5568] mb-2'
-                                    style={{ fontFamily: 'Lato' }}
+                                    className='block text-base sm:text-lg text-[#4a5568] mb-2'
+                                    style={{ fontFamily: 'Roboto' }}
                                 >
                                     Subject
                                 </label>
@@ -620,8 +620,8 @@ const Footer = () => {
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className='w-full px-4 py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
-                                    style={{ fontFamily: 'Lato' }}
+                                    className='w-full px-4 py-3 border border-[#4a5568] rounded-lg text-[#2d3748] text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
+                                    style={{ fontFamily: 'Roboto' }}
                                     required
                                     placeholder="What's this about?"
                                 />
@@ -633,8 +633,8 @@ const Footer = () => {
                             }`} style={{ transitionDelay: '900ms' }}>
                                 <label
                                     htmlFor="message"
-                                    className='block text-lg text-[#4a5568] mb-2'
-                                    style={{ fontFamily: 'Lato' }}
+                                    className='block text-base sm:text-lg text-[#4a5568] mb-2'
+                                    style={{ fontFamily: 'Roboto' }}
                                 >
                                     Message
                                 </label>
@@ -644,8 +644,8 @@ const Footer = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     rows="4"
-                                    className='w-full px-4 py-3 border border-[#4a5568] rounded-lg resize-vertical text-[#2d3748] text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
-                                    style={{ fontFamily: 'Lato' }}
+                                    className='w-full px-4 py-3 border border-[#4a5568] rounded-lg resize-vertical text-[#2d3748] text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:border-transparent'
+                                    style={{ fontFamily: 'Roboto' }}
                                     required
                                     placeholder="Tell me about your project..."
                                 />
@@ -656,11 +656,11 @@ const Footer = () => {
                                 type="button"
                                 onClick={handleSubmit}
                                 disabled={isSubmitting}
-                                className={`w-full bg-[#2d3748] text-white py-3 px-6 rounded-lg text-lg transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:bg-[#1a202c] disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:ring-offset-2 ${
+                                className={`w-full bg-[#2d3748] text-white py-3 px-6 rounded-lg text-base sm:text-lg  transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 hover:bg-[#1a202c] disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-[#2d3748] focus:ring-offset-2 ${
                                     isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                                 }`}
                                 style={{
-                                    fontFamily: 'Lato',
+                                    fontFamily: 'Roboto',
                                     transitionDelay: '1000ms'
                                 }}
                             >
@@ -670,11 +670,11 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <p className={`mt-8 text-center text-lg text-[#4a5568] transition-all duration-800 ease-out ${
+                <p className={`mt-8 text-center text-base sm:text-lg  text-[#4a5568] transition-all duration-800 ease-out ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
                     style={{
-                        fontFamily: 'Lato',
+                        fontFamily: 'Roboto',
                         transitionDelay: '1200ms'
                     }}
                 >
