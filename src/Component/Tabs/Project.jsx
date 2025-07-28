@@ -88,7 +88,7 @@ const ProjectCard = ({
                                 </a>
                             )}
                         </div>
-                        <p className='text-justify text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
+                        <p className=' text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
                             {project.description}
                         </p>
                         {project.comingSoon && (
@@ -135,7 +135,7 @@ const ProjectCard = ({
                     <h3 className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
                         {project.title}
                     </h3>
-                    <p className='text-justify text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
+                    <p className=' text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
                         {project.description}
                     </p>
                     {project.comingSoon && (

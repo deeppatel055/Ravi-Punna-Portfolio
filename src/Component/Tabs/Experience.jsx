@@ -125,7 +125,7 @@ const ExperienceSection = () => {
                                     </div>
 
                                     {/* Description */}
-                                    <p className="text-[#2d3748] mb-4 text-justify text-base sm:text-lg  leading-relaxed" style={{ fontFamily: 'Roboto' }}>
+                                    <p className="text-[#2d3748] mb-4 text-base sm:text-lg  leading-relaxed" style={{ fontFamily: 'Roboto' }}>
                                         {exp.description}
                                     </p>
 

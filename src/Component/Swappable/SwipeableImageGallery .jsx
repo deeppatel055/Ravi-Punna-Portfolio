@@ -151,7 +151,7 @@ const SwipeableImageGallery = ({ images = [], content }) => {
 
       {/* Content Section */}
       <div className='mt-6 sm:mt-8 lg:mt-10'>
-        <div className='text-sm sm:text-base lg:text-lg leading-relaxed text-[#4a5568] text-justify px-2 sm:px-0' 
+        <div className='text-sm sm:text-base lg:text-lg leading-relaxed text-[#4a5568]  px-2 sm:px-0' 
              style={{ fontFamily: 'Roboto, sans-serif' }}>
           {content}
         </div>

@@ -68,7 +68,7 @@ const Service = () => {
                                     {service.title}
                                 </h3>
 
-                                <p className="text-base sm:text-lg text-[#2d3748] text-justify leading-relaxed mb-6" style={{ fontFamily: 'Roboto' }}>
+                                <p className="text-base sm:text-lg text-[#2d3748]  leading-relaxed mb-6" style={{ fontFamily: 'Roboto' }}>
                                     {service.description}
                                 </p>
 
