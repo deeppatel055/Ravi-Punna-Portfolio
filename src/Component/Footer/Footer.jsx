@@ -128,7 +128,7 @@ const Footer = () => {
         <div>
             <footer
                 ref={footerRef}
-                className={`mt-8 mb-4 px-4 md:px-6 lg:px-8 xl:px-12 max-w-7xl mx-auto transition-all duration-1000 ease-out ${
+                className={`mt-15 mb-4 px-4 md:px-6 lg:px-8 xl:px-12 max-w-7xl mx-auto transition-all duration-1000 ease-out ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
             >
