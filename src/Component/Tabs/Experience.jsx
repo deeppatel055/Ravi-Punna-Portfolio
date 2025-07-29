@@ -7,23 +7,23 @@ const ExperienceSection = () => {
     const experiences = [
         {
             id: 1,
-            title: "Web Development Intern",
-            company: "Pyonix Technology",
-            location: "Ahmadabad, Gujarat, IN",
-            duration: "Jul 2025 (15-day Internship)",
+            title: "MERN Stack Developer Intern",
+            company: "N R CREW Software Development Company",
+            location: "Remote",
+            duration: "Feb 2025 - Present",
             type: "Internship",
-            description: "Completed a short-term internship focused on learning the fundamentals of web development. Gained introductory experience with core frontend technologies and basic Python programming.",
+            description: "Currently undergoing a 6-month internship focused on full-stack web development using the MERN (MongoDB, Express.js, React, Node.js) stack. Building real-world applications and improving skills in both frontend and backend technologies.",
             achievements: [
-                "Learned the basics of HTML and CSS for structuring and styling web pages",
-                "Explored basic JavaScript for adding simple interactivity",
-                "Practiced writing simple Python scripts and understanding core concepts",
-                "Gained exposure to code editing tools and development best practices"
+                "Developing responsive web applications using React and Tailwind CSS",
+                "Creating RESTful APIs with Node.js and Express.js",
+                "Working with MongoDB for data storage and retrieval",
+                "Gaining practical experience with full-stack architecture and project deployment"
             ],
-            technologies: ["HTML", "CSS", "JavaScript", "Python"],
-            companyUrl: "https://www.pyonix.in/",
-            status:'completed'
+            technologies: ["React", "Typescript", "Node", "Tailwind CSS", "Material UI", "Mongo DB", "SQL", "Postgre SQL"],
+            companyUrl: "https://www.nrcrew.com/",
+            status:'active'
         },
-
+        
         {
             id: 2,
             title: "Data Analyst Intern",
@@ -45,22 +45,22 @@ const ExperienceSection = () => {
         },
         {
             id: 3,
-            title: "MERN Stack Developer Intern",
-            company: "N R CREW Software Development Company",
-            location: "Remote",
-            duration: "Feb 2025 - Present",
+            title: "Web Development Intern",
+            company: "Pyonix Technology",
+            location: "Ahmadabad, Gujarat, IN",
+            duration: "Jul 2025 (15-day Internship)",
             type: "Internship",
-            description: "Currently undergoing a 6-month internship focused on full-stack web development using the MERN (MongoDB, Express.js, React, Node.js) stack. Building real-world applications and improving skills in both frontend and backend technologies.",
+            description: "Completed a short-term internship focused on learning the fundamentals of web development. Gained introductory experience with core frontend technologies and basic Python programming.",
             achievements: [
-                "Developing responsive web applications using React and Tailwind CSS",
-                "Creating RESTful APIs with Node.js and Express.js",
-                "Working with MongoDB for data storage and retrieval",
-                "Gaining practical experience with full-stack architecture and project deployment"
+                "Learned the basics of HTML and CSS for structuring and styling web pages",
+                "Explored basic JavaScript for adding simple interactivity",
+                "Practiced writing simple Python scripts and understanding core concepts",
+                "Gained exposure to code editing tools and development best practices"
             ],
-            technologies: ["React", "Typescript", "Node", "Tailwind CSS", "Material UI", "Mongo DB", "SQL", "Postgre SQL"],
-            companyUrl: "https://www.nrcrew.com/",
-            status:'active'
-        }
+            technologies: ["HTML", "CSS", "JavaScript", "Python"],
+            companyUrl: "https://www.pyonix.in/",
+            status:'completed'
+        },
 
     ];
 
@@ -134,7 +134,7 @@ const ExperienceSection = () => {
                                         {exp.technologies.map((tech, techIndex) => (
                                             <span
                                                 key={techIndex}
-                                                className="px-3 py-1 bg-[#2d3748] text-[#e6e6e6] text-base sm:text-lg rounded-full hover:bg-gray-200 transition-colors" style={{ fontFamily: 'Roboto' }}
+                                                className="px-3 py-1 bg-[#2d3748] text-[#e6e6e6] text-base sm:text-lg rounded-full " style={{ fontFamily: 'Roboto' }}
                                             >
                                                 {tech}
                                             </span>
