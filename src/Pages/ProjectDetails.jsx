@@ -39,20 +39,24 @@ const projectData = {
         content: (
             <div className="space-y-4">
                 <p>
-                    This Project Management website is a full-stack application built using React for the frontend, Node.js for the backend, and MySQL as the database. It is designed to help teams manage and monitor their projects and tasks efficiently with real-time updates and intuitive interfaces.
-                </p>
-                <p>
-                    Admins can create multiple projects and define essential details like project title, description, start date, due date, and status. Each project can contain multiple tasks. Tasks support fields such as title, description, priority level, due date, and status.
-                </p>
-                <p>
-                    User management is built with role-based access: Super Admin auto-assigns to all, Admin can manage users, Write can update assigned tasks, and Read can only view.
-                </p>
-                <p>
-                    Node.js + Express handles API requests; MySQL stores data. React frontend communicates via REST APIs. Features like real-time updates and status tracking enhance productivity.
-                </p>
-                <p>
-                    The system is scalable and can be extended with notifications, file attachments, user comments, and performance dashboards.
-                </p>
+            This  Project Management website   is a      full-stack application built using React for the frontend,  Node.js for the backend, and MySQL as the database. It is designed to help teams manage and monitor their projects and tasks efficiently with real-time updates and intuitive interfaces. The system supports the full lifecycle of a project—from creation to completion—ensuring better organization and visibility across tasks.
+        </p>
+
+        <p>
+            Admins can create multiple projects and define essential details like project title, description, start date, due date, and status. Each project can contain multiple tasks, which are the building blocks of project execution. Tasks can be assigned to individual users, making collaboration easier and more organized. Every task supports fields such as title, description, priority level (high, medium, low), due date, and status (pending, in progress, completed), allowing the team to stay focused and aligned.
+        </p>
+
+        <p>
+            User management is built into the system with role-based access control. The admin has full access to create, edit, and delete projects and tasks, as well as manage users.Super Admin role has auto assign in all admin created project and task. Write role users can view and update only their assigned tasks, depending on their role permissions. Read role can only see the project and task This role-based approach ensures secure data handling and keeps the focus on individual responsibilities within a collaborative environment.
+        </p>
+
+        <p>
+            The backend, powered by Node.js and Express, handles all API requests securely and efficiently. MySQL is used as the relational database to store structured data related to users, projects, and tasks. The frontend, built in React, communicates with the backend via REST APIs to provide a smooth and responsive user experience. Features like real-time task updates, status tracking, and priority sorting are implemented to enhance productivity and transparency.
+        </p>
+
+        <p>
+            This system is highly scalable and can be extended further with features like email notifications like when user assign in project and task, user comments and audit logs. It serves as a reliable foundation for teams aiming to manage their workflow digitally and keep every team member aligned with project goals.
+        </p>
             </div>
         ),
     },
@@ -62,18 +66,22 @@ const projectData = {
         images: [DairyImage1, DairyImage2, DairyImage3, DairyImage4, DairyImage5, DairyImage6],
         content: (
             <div className="space-y-4">
-                <p>
-                    I designed and developed a full-featured milk-based e-commerce platform using the MERN stack, tailored specifically for selling dairy products like milk, curd, and buttermilk. The system supports both individual and bulk purchases in the form of crates, streamlining the ordering experience for customers.
-                </p>
-                <p>
-                    The application supports role-based access with separate dashboards and functionalities for Admin, Vendor, Delivery Personnel, and Cashier. Admin manages inventory and users, vendors handle listings, delivery agents manage routes, and cashiers verify offline orders.
-                </p>
-                <p>
-                    Customers can browse and add items to the cart, choose crates, and place orders. It supports both online (UPI, card) and offline (Cash on Delivery) payments. The platform is responsive and secure.
-                </p>
-                <p>
-                    This project highlights my skills in building scalable, role-driven e-commerce systems with advanced cart/payment flows and intuitive design using the MERN stack.
-                </p>
+                 <p>
+           I designed and developed a full-featured milk-based e-commerce platform using the MERN stack, tailored specifically for selling dairy products like milk, curd, and buttermilk. The system supports both individual and bulk purchases in the form of crates, streamlining the ordering experience for customers. With a focus on local vendors and recurring deliveries, the platform ensures that customers can schedule regular milk deliveries with ease.
+        </p>
+        
+        <p>
+           The application supports role-based access with separate dashboards and functionalities for Admin, Vendor, Delivery Personnel, and Cashier. The Admin panel allows for product and inventory management, user control, order tracking, and vendor coordination. Vendors can manage their product listings and crate availability, while Delivery agents have access to optimized delivery routes and customer delivery statuses. The Cashier role handles in-person payments and order verifications.
+        </p>
+        
+        <p>
+         Customers can browse and add dairy items to their cart, select quantities in crates, and place orders using a seamless add-to-cart and checkout flow. The platform supports both online payments (via UPI, cards, etc.) and offline options (Cash on Delivery). A responsive UI ensures accessibility across devices, while secure backend logic ensures data protection and fast order processing.
+        </p>
+        
+        <p>
+          Overall, this project showcases my skills in building scalable, real-world e-commerce solutions with a complex role system, advanced cart and payment features, and intuitive UI/UX — all built from the ground up using the MERN stack.
+        </p>
+        
             </div>
         ),
     },
