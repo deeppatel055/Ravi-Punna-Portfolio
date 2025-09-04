@@ -94,19 +94,19 @@ const Mainsection = () => {
             className="text-4xl sm:text-4xl md:text-5xl font-bold text-[#2d3748] leading-tight"
             style={{ fontFamily: 'Roboto' }}
           >
-            I'm a <br /> Web Developer
+            LEAD DATA ENGINEER
           </h1>
           <p
             ref={paragraphRef}
             className="mt-3 md:mt-2 text-base sm:text-lg text-[#4a5568] leading-relaxed"
             style={{ fontFamily: 'Roboto' }}
           >
-            From front-end design to back-end logic, <br className="hidden sm:block" />
-            I turn ideas into interactive, high-performing web applications.
+          From data pipelines to scalable architectures, <br className="hidden sm:block" />
+            I turn raw information into reliable, BI solutions.
           </p>
           <a
             ref={resumeRef}
-             href="/Deep-Patel-Portfolio/Deep_Patel_Resume.pdf"
+             href="/Ravi_Punna_DE.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-6 py-2 bg-[#2d3748] text-white rounded-lg hover:bg-[#4a5568] transition-colors duration-300"
@@ -123,7 +123,7 @@ const Mainsection = () => {
             <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-[#2d3748]">
               <img
                 src={photo}
-                alt="Professional developer photo"
+                alt="Profile photo"
                 className="w-full h-full object-cover"
               />
             </div>

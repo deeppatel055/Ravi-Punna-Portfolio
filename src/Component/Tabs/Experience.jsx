@@ -4,65 +4,180 @@ import { Calendar, MapPin, ChevronDown, ChevronUp, ExternalLink } from 'lucide-r
 const ExperienceSection = () => {
     const [expandedItems, setExpandedItems] = useState({});
 
-    const experiences = [
-        {
-            id: 1,
-            title: "MERN Stack Developer Intern",
-            company: "N R CREW Software Development Company",
-            location: "Remote",
-            duration: "Feb 2025 - Present",
-            type: "Internship",
-            description: "Currently undergoing a 6-month internship focused on full-stack web development using the MERN (MongoDB, Express.js, React, Node.js) stack. Building real-world applications and improving skills in both frontend and backend technologies.",
-            achievements: [
-                "Developing responsive web applications using React and Tailwind CSS",
-                "Creating RESTful APIs with Node.js and Express.js",
-                "Working with MongoDB for data storage and retrieval",
-                "Gaining practical experience with full-stack architecture and project deployment"
-            ],
-            technologies: ["React", "Typescript", "Node", "Tailwind CSS", "Material UI", "Mongo DB", "SQL", "Postgre SQL"],
-            companyUrl: "https://www.nrcrew.com/",
-            status:'active'
-        },
+    // const experiences = [
+    //     {
+    //         id: 1,
+    //         title: "MERN Stack Developer Intern",
+    //         company: "N R CREW Software Development Company",
+    //         location: "Remote",
+    //         duration: "Feb 2025 - Present",
+    //         type: "Internship",
+    //         description: "Currently undergoing a 6-month internship focused on full-stack web development using the MERN (MongoDB, Express.js, React, Node.js) stack. Building real-world applications and improving skills in both frontend and backend technologies.",
+    //         achievements: [
+    //             "Developing responsive web applications using React and Tailwind CSS",
+    //             "Creating RESTful APIs with Node.js and Express.js",
+    //             "Working with MongoDB for data storage and retrieval",
+    //             "Gaining practical experience with full-stack architecture and project deployment"
+    //         ],
+    //         technologies: ["React", "Typescript", "Node", "Tailwind CSS", "Material UI", "Mongo DB", "SQL", "Postgre SQL"],
+    //         companyUrl: "https://www.nrcrew.com/",
+    //         status:'active'
+    //     },
         
-        {
-            id: 2,
-            title: "Data Analyst Intern",
-            company: "Pyonix Technology",
-            location: "Ahmadabad, Gujarat, IN",
-            duration: "Sep 2024 - Dec 2024",
-            type: "Internship",
-            description: "Completed a 4-month internship focused on learning the fundamentals of data analysis. Gained hands-on experience with spreadsheet tools, basic Python for data handling, and introductory data visualization techniques.",
-            achievements: [
-                "Learned to clean and organize datasets using Excel and Python",
-                "Explored basic data analysis techniques such as filtering, grouping, and summarizing",
-                "Created simple charts and graphs to visualize data insights",
-                "Understood the basics of data-driven decision-making and reporting"
-            ],
-            technologies: ["Excel", "Python ", "Numpy", "Pandas", "Matplotlib", "Seaborn", "SQL", "Power BI"],
-            companyUrl: "https://www.pyonix.in/",
-            status:'completed'
+    //     {
+    //         id: 2,
+    //         title: "Data Analyst Intern",
+    //         company: "Pyonix Technology",
+    //         location: "Ahmadabad, Gujarat, IN",
+    //         duration: "Sep 2024 - Dec 2024",
+    //         type: "Internship",
+    //         description: "Completed a 4-month internship focused on learning the fundamentals of data analysis. Gained hands-on experience with spreadsheet tools, basic Python for data handling, and introductory data visualization techniques.",
+    //         achievements: [
+    //             "Learned to clean and organize datasets using Excel and Python",
+    //             "Explored basic data analysis techniques such as filtering, grouping, and summarizing",
+    //             "Created simple charts and graphs to visualize data insights",
+    //             "Understood the basics of data-driven decision-making and reporting"
+    //         ],
+    //         technologies: ["Excel", "Python ", "Numpy", "Pandas", "Matplotlib", "Seaborn", "SQL", "Power BI"],
+    //         companyUrl: "https://www.pyonix.in/",
+    //         status:'completed'
 
-        },
-        {
-            id: 3,
-            title: "Web Development Intern",
-            company: "Pyonix Technology",
-            location: "Ahmadabad, Gujarat, IN",
-            duration: "Jul 2025 (15-day Internship)",
-            type: "Internship",
-            description: "Completed a short-term internship focused on learning the fundamentals of web development. Gained introductory experience with core frontend technologies and basic Python programming.",
-            achievements: [
-                "Learned the basics of HTML and CSS for structuring and styling web pages",
-                "Explored basic JavaScript for adding simple interactivity",
-                "Practiced writing simple Python scripts and understanding core concepts",
-                "Gained exposure to code editing tools and development best practices"
-            ],
-            technologies: ["HTML", "CSS", "JavaScript", "Python"],
-            companyUrl: "https://www.pyonix.in/",
-            status:'completed'
-        },
+    //     },
+    //     {
+    //         id: 3,
+    //         title: "Web Development Intern",
+    //         company: "Pyonix Technology",
+    //         location: "Ahmadabad, Gujarat, IN",
+    //         duration: "Jul 2025 (15-day Internship)",
+    //         type: "Internship",
+    //         description: "Completed a short-term internship focused on learning the fundamentals of web development. Gained introductory experience with core frontend technologies and basic Python programming.",
+    //         achievements: [
+    //             "Learned the basics of HTML and CSS for structuring and styling web pages",
+    //             "Explored basic JavaScript for adding simple interactivity",
+    //             "Practiced writing simple Python scripts and understanding core concepts",
+    //             "Gained exposure to code editing tools and development best practices"
+    //         ],
+    //         technologies: ["HTML", "CSS", "JavaScript", "Python"],
+    //         companyUrl: "https://www.pyonix.in/",
+    //         status:'completed'
+    //     },
 
-    ];
+    // ];
+const experiences = [
+  {
+    id: 1,
+    title: "Lead Data Engineer",
+    company: "Inferenz Tech Pvt Ltd",
+    location: "Ahmedabad, IN",
+    duration: "Jul 2022 - Present",
+    type: "Full-time",
+    description: "Leading data engineering initiatives in the healthcare domain with expertise in Snowflake, PowerBI, Microsoft Fabric, SQL, and ADF. Responsible for designing scalable data pipelines, automating data ingestion, developing BI dashboards, and mentoring junior engineers.",
+    achievements: [
+      "Automated data ingestion processes reducing manual effort significantly",
+      "Designed and implemented scalable data pipelines with modern BI frameworks",
+      "Created observability reporting project and trained onshore BI team",
+      "Built Microsoft Teams alerts for discrepancies using Power Automate & Data Activator",
+      "Awarded 'Customer Centric Award' in Q4 2022-23 for outstanding performance"
+    ],
+    technologies: ["Snowflake", "Power BI", "Microsoft Fabric", "SQL", "Azure Data Factory", "Tableau", "Jira", "Confluence", "Power Automate"],
+    companyUrl: "https://inferenz.ai/",
+    status: "active"
+  },
+  {
+    id: 2,
+    title: "Data Analyst / Assistant Manager (Business)",
+    company: "Hari Om Communication LLP",
+    location: "Ahmedabad, IN",
+    duration: "Jun 2018 - Jun 2022",
+    type: "Full-time",
+    description: "Worked on retail, supply chain, and distribution projects. Built reporting systems, sales dashboards, and employee performance dashboards while managing data sourcing, modeling, and analytics with Power BI and MySQL.",
+    achievements: [
+      "Developed automated reporting systems and dashboards with Power BI",
+      "Created daily KPI dashboards for sales, employees, and dealers",
+      "Streamlined business reporting by integrating ADF, PowerQuery, and DAX",
+      "Improved decision-making through root cause analysis of process gaps"
+    ],
+    technologies: ["MySQL", "Azure Data Factory", "Power BI", "Power Query", "DAX"],
+    status: "completed"
+  },
+  {
+    id: 3,
+    title: "Senior Business Analyst",
+    company: "Syntech Technology India Pvt. Ltd.",
+    location: "Ahmedabad, IN",
+    duration: "Feb 2017 - May 2018",
+    type: "Full-time",
+    description: "Worked on business analysis and reporting, collaborating with cross-functional teams to define requirements and improve reporting workflows.",
+    achievements: [
+      "Gathered and documented business requirements",
+      "Supported development of business intelligence reports",
+      "Provided insights to enhance operational efficiency"
+    ],
+    technologies: ["SQL", "Power BI", "Excel"],
+    status: "completed"
+  },
+  {
+    id: 4,
+    title: "Lead MIS",
+    company: "Delta Mobility Pvt Ltd",
+    location: "Ahmedabad, IN",
+    duration: "Apr 2016 - Feb 2017",
+    type: "Full-time",
+    description: "Led the MIS team, responsible for reporting and data management to support business decisions.",
+    achievements: [
+      "Implemented MIS reporting solutions",
+      "Streamlined operational dashboards",
+      "Ensured accuracy of management data reports"
+    ],
+    technologies: ["Excel", "SQL", "MIS Reporting"],
+    status: "completed"
+  },
+  {
+    id: 5,
+    title: "Supervisor",
+    company: "Annet Technologies Pvt Ltd",
+    location: "Gandhinagar, IN",
+    duration: "Oct 2015 - Apr 2016",
+    type: "Full-time",
+    description: "Supervised reporting and analytics tasks, ensuring timely delivery of MIS reports for business operations.",
+    achievements: [
+      "Monitored and supervised MIS reporting team",
+      "Ensured timely and accurate delivery of client reports"
+    ],
+    technologies: ["Excel", "MIS", "Team Management"],
+    status: "completed"
+  },
+  {
+    id: 6,
+    title: "MIS Executive",
+    company: "Ascendum KPS Pvt Ltd",
+    location: "Ahmedabad, IN",
+    duration: "Mar 2012 - Sep 2015",
+    type: "Full-time",
+    description: "Handled MIS reporting and business data analysis, supporting various operational and financial reporting requirements.",
+    achievements: [
+      "Created automated reports for internal teams",
+      "Maintained accuracy and consistency in MIS data"
+    ],
+    technologies: ["Excel", "SQL", "MIS Reporting"],
+    status: "completed"
+  },
+  {
+    id: 7,
+    title: "MIS Executive",
+    company: "Aegis Ltd",
+    location: "Ahmedabad, IN",
+    duration: "Apr 2008 - Sep 2011",
+    type: "Full-time",
+    description: "Worked as MIS executive focusing on data reporting, process analysis, and operational dashboards for business units.",
+    achievements: [
+      "Generated and maintained MIS reports for business operations",
+      "Provided actionable insights for decision-making"
+    ],
+    technologies: ["Excel", "MIS Reporting"],
+    status: "completed"
+  }
+];
 
     const toggleExpand = (id) => {
         setExpandedItems(prev => ({

@@ -12,7 +12,7 @@
   "deploy": "gh-pages -d dist"
 
   },
-  "homepage": "https://deeppatel055.github.io/Deep-Patel-Portfolio/",
+ 
 
   "dependencies": {
     "@gsap/react": "^2.1.2",

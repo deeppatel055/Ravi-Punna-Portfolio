@@ -1,223 +1,139 @@
-import { Link } from 'react-router-dom';
-import project1 from './../../assets/Project1/image1.png'
-import project2 from './../../assets/Project2/image1.png'
-import project3 from './../../assets/Project3/image1.png'
-import project4 from './../../assets/Project4/image1.png'
-import { ExternalLink } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
 
-const useIntersectionObserver = (options = {}) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true);
-            }
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px',
-            ...options
-        });
-
-        const currentRef = ref.current;
-        if (currentRef) {
-            observer.observe(currentRef);
-        }
-
-        return () => {
-            if (currentRef) {
-                observer.unobserve(currentRef);
-            }
-        };
-    }, []);
-
-    return [ref, isVisible];
-};
-
-const ProjectCard = ({
-    project,
-    isReversed = false,
-    isBottomLayout = false,
-    delay = 0
-}) => {
-    const [ref, isVisible] = useIntersectionObserver();
-
-    const baseClasses = `transform transition-all duration-1000 ease-out ${isVisible
-        ? 'translate-y-0 opacity-100'
-        : 'translate-y-20 opacity-0'
-        }`;
-
-    const delayStyle = { transitionDelay: `${delay}ms` };
-
-    if (isBottomLayout) {
-        return (
-            <div
-                ref={ref}
-                className={`w-full md:w-1/2 flex flex-col ${baseClasses}`}
-                style={delayStyle}
-            >
-                <div className='relative overflow-hidden rounded-2xl shadow-lg mb-4 group cursor-pointer'>
-                    <Link to={project.link}>
-                        <div className='flex transition-transform duration-500 ease-in-out'>
-                            <img
-                                src={project.image}
-                                alt={project.alt}
-                                className='w-full h-full flex-shrink-0 bg-gray-50 transition-all duration-300 group-hover:blur-sm group-hover:scale-110'
-                            />
-                        </div>
-                        <div className='absolute inset-0 backdrop-blur-md bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                            <span className={`${project.textColor || 'text-black'} text-xl md:text-3xl font-bold`} style={{ fontFamily: 'Roboto' }}>
-                                Click me
-                            </span>
-                        </div>
-                    </Link>
-
-                </div>
-
-                <div className='flex flex-col justify-start'>
-                    <div className='space-y-3'>
-                        <div className='flex items-center gap-2'>
-                            <h3 className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
-                                {project.title}
-                            </h3>
-                            {project.externalLink && (
-                                <a href={project.externalLink} target="_blank" rel="noopener noreferrer">
-                                    <ExternalLink />
-                                </a>
-                            )}
-                        </div>
-                        <p className=' text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
-                            {project.description}
-                        </p>
-                        {project.comingSoon && (
-                            <p className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
-                                Coming Soon...
-                            </p>
-                        )}
-                    </div>
-                </div>
-            </div>
-        );
-    }
-
-    return (
-        <div
-            ref={ref}
-            className={`flex flex-col lg:flex-row gap-4 lg:gap-6 items-start mb-10 ${baseClasses}`}
-            style={delayStyle}
-        >
-            <div className={`w-full lg:w-[70%] flex-shrink-0 relative ${isReversed ? 'order-1 lg:order-2' : ''}`}>
-                <div className='relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer'>
-                    <Link to={project.link}>
-
-                        <div className='flex transition-transform duration-500 ease-in-out'>
-                            <img
-                                src={project.image}
-                                alt={project.alt}
-                                className='w-full h-full flex-shrink-0 bg-gray-50 transition-all duration-300 group-hover:blur-sm group-hover:scale-110'
-                            />
-                        </div>
-                        <div className='absolute inset-0 backdrop-blur-md bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                            <span className='text-black text-xl md:text-3xl font-bold'
-                                style={{ fontFamily: 'Roboto' }}
-                            >
-                                Click me
-                            </span>
-                        </div>
-                    </Link>
-                </div>
-            </div>
-
-            <div className={`w-full lg:w-[30%] flex flex-col justify-start ${isReversed ? 'order-2 lg:order-1' : ''}`}>
-                <div className='space-y-3'>
-                    <h3 className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
-                        {project.title}
-                    </h3>
-                    <p className=' text-base sm:text-lg text-[#4a5568] leading-relaxed' style={{ fontFamily: 'Roboto' }}>
-                        {project.description}
-                    </p>
-                    {project.comingSoon && (
-                        <p className='text-2xl font-bold text-[#2d3748]' style={{ fontFamily: 'Roboto' }}>
-                            Coming Soon...
-                        </p>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
-};
+import React from 'react';
+import { MapPin, Users, BarChart, Database, Monitor, ShoppingCart } from 'lucide-react';
 
 const Project = () => {
     const projects = [
         {
-            image: project1,
-            alt: 'Project Management Dashboard',
-            title: 'Project Management',
-            description: 'Designed and developed a full-featured project management website with task tracking, project organization, and an admin panel for user role management.',
-            link: '/project/project-management',
-            comingSoon: true
+            id: 1,
+            title: "Production Support ",
+            location: "US",
+            description: "Lead a production support team of 6 members, handling post-deployment issues, production data changes, and BI/business team requests.",
+            skills: ["Production Support", "Team Leadership", "Issue Resolution", "BI Support"],
+            icon: <Users className="w-8 h-8" />,
+            color: "bg-blue-500"
         },
         {
-            image: project2,
-            alt: 'Milk Dairy E-commerce',
-            title: 'Milk Dairy',
-            description: 'Designed and developed an e-commerce website specializing in dairy-based products, offering a seamless shopping experience for fresh, high-quality items.',
-            link: '/project/milk-dairy',
-            comingSoon: true
-        }
-    ];
-
-    const bottomProjects = [
-        {
-            image: project3,
-            alt: 'To Do Web Application',
-            title: 'To Do web',
-            description: 'Designed and developed a responsive and secure To-Do web app to create, update, and track daily tasks through a simple interface.',
-            link: '/project/to-do',
-            externalLink: 'https://deeppatel055.github.io/Taskly/',
-            textColor: 'text-black'
+            id: 2,
+            title: "BI  Development - Dev & Prod Comparison",
+            location: "US",
+            description: "Developed a Power BI dashboard combining Dev and Prod environments to provide structure verification and performance comparison.",
+            skills: ["Power BI", "Dashboard Development", "Data Validation", "Environment Comparison"],
+            icon: <BarChart className="w-8 h-8" />,
+            color: "bg-green-500"
         },
         {
-            image: project4,
-            alt: 'Movie Website',
-            title: 'Movie Website',
-            description: 'Designed and developed a dynamic movie website to browse, search, and watch trailers with detailed information on the latest and popular films.',
-            link: '/project/moviebly',
-            externalLink: 'https://deeppatel055.github.io/moviebly/',
-            textColor: 'text-white'
+            id: 3,
+            title: "Observability BI Solution",
+            location: "US",
+            description: "Collaborated with ETL team to gather ADF, SQL, and pipeline logs and built a Power BI observability dashboard for monitoring data pipelines.",
+            skills: ["ADF", "SQL", "ETL", "Power BI", "Observability"],
+            icon: <Monitor className="w-8 h-8" />,
+            color: "bg-purple-500"
+        },
+        {
+            id: 4,
+            title: "Retail & Supply Chain BI Solution",
+            location: "US",
+            description: "Designed and developed Power BI reports and dashboards for a US-based retail chain store, providing insights into retail and supply chain operations.",
+            skills: ["MSSQL", "Power BI", "Retail Analytics", "Supply Chain Reporting"],
+            icon: <ShoppingCart className="w-8 h-8" />,
+            color: "bg-orange-500"
+        },
+        {
+            id: 5,
+            title: "Data Center Service & Visit BI Solution",
+            location: "US",
+            description: "Created a Power BI dashboard integrated with SharePoint to track data center service requests and visits across US operations.",
+            skills: ["Power BI", "SharePoint", "Data Visualization", "Service Monitoring"],
+            icon: <Database className="w-8 h-8" />,
+            color: "bg-red-500"
+        },
+        {
+            id: 6,
+            title: "Sales Data Management & Reporting",
+            location: "India",
+            description: "Built an end-to-end sales data management solution. Created MySQL database, automated data dumping into SharePoint using Power Automate, and developed multiple Power BI dashboards including Sales, Employee Performance, Dealer Management, and Scheme Dashboards. Delivered solutions for clients like OnePlus, Apple, Gionee, HOM TV, and Realme (Narzo).",
+            skills: ["Power BI", "SharePoint", "Power Automate", "MySQL", "Dashboard Development", "Sales Analytics", "ETL Automation"],
+            icon: <BarChart className="w-8 h-8" />,
+            color: "bg-indigo-500"
         }
     ];
 
     return (
-        <div >
-            <div className='max-w-6xl mx-auto px-4'>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+              
 
+                {/* Projects Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {projects.map((project) => (
+                        <div
+                            key={project.id}
+                            className="group relative overflow-hidden rounded-2xl bg-[#7d7d7d2b] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2"
+                        >
+                            {/* Background Gradient Overlay */}
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
 
-                {/* Top Projects */}
-                {projects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        project={project}
-                        isReversed={index === 1}
-                        delay={index * 200}
-                    />
-                ))}
+                            {/* Icon with Gradient Background */}
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-[#2d3748] text-[#e6e6e6] mb-6 group-hover:scale-110 transition-transform duration-300">
+                                {project.icon}
+                            </div>
 
-                {/* Bottom Projects - Two Column Layout */}
-                <div className='flex flex-col md:flex-row gap-6'>
-                    {bottomProjects.map((project, index) => (
-                        <ProjectCard
-                            key={index}
-                            project={project}
-                            isBottomLayout={true}
-                            delay={index * 300}
-                        />
+                            {/* Content */}
+                            <div className="relative z-10">
+                                {/* Title and Location */}
+                                <div className="flex items-start justify-between mb-4">
+                                    <h3 className="text-2xl font-bold text-[#2d3748] flex-1" style={{ fontFamily: 'Roboto' }}>
+                                        {project.title}
+                                    </h3>
+                                    <div className="flex items-center gap-1 text-sm text-[#2d3748] bg-[#e6e6e6] px-3 py-1 rounded-full ml-4">
+                                        <MapPin className="w-3 h-3" />
+                                        {project.location}
+                                    </div>
+                                </div>
+
+                                <p className="text-base sm:text-lg text-[#2d3748] leading-relaxed mb-6" style={{ fontFamily: 'Roboto' }}>
+                                    {project.description}
+                                </p>
+
+                                {/* Skills */}
+                                <div className="mb-6">
+                                    <h4 className="text-sm font-semibold text-[#2d3748] mb-3" style={{ fontFamily: 'Roboto' }}>
+                                        Key Technologies & Skills
+                                    </h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.skills.map((skill, index) => (
+                                            <span
+                                                key={index}
+                                                className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#2d3748] text-[#e6e6e6] transition-all duration-300 "
+                                                style={{ fontFamily: 'Roboto' }}
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Decorative Elements */}
+                            <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-tr from-white/30 to-transparent rounded-full blur-lg group-hover:scale-125 transition-transform duration-700"></div>
+                        </div>
                     ))}
                 </div>
+
+                {/* Bottom CTA */}
+                {/* <div className="text-center mt-16">
+                    <button className="inline-flex items-center px-8 py-4 bg-[#2d3748] text-[#e6e6e6] font-semibold rounded-xl hover:bg-blue-600 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20" style={{ fontFamily: 'Roboto' }}>
+                        View All Projects
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                </div> */}
             </div>
-        </div>
     );
 };
 

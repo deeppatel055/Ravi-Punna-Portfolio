@@ -14,7 +14,7 @@ const HeroSection = () => {
     return (
         <div className="pt-25 md:pt-35 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-                <Navbar title="I'm Deep Patel" />
+                <Navbar title="I'm Ravi Punna" />
                 <MainSection />
                 <TabSwitch />
                 <Footer />

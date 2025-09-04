@@ -8,7 +8,7 @@ const TabSwitch = () => {
     const [activeTab, setActiveTab] = useState('Projects');
     const [isLoaded, setIsLoaded] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const tabs = ['Projects', 'Services', 'Experience', 'Skills'];
+    const tabs = ['Projects',  'Experience', 'Skills'];
     const tabContentRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -127,7 +127,6 @@ const TabSwitch = () => {
             >
                 {activeTab === 'Projects' && <Project />}
 
-                {activeTab === 'Services' &&  <Service />}
                 {activeTab === 'Skills' &&  <Skill />}
 
                 {activeTab === 'Experience' && <ExperienceSection />}

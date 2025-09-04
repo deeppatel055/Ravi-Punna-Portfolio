@@ -9,8 +9,8 @@ const Intro = ({ onComplete }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [isExiting, setIsExiting] = useState(false);
 
-    const introText = "Hi, I'm Deep Patel...";
-    const backspaceText = "Hi, I'm Deep Patel";
+    const introText = "Hi, I'm Ravi Punna...";
+    const backspaceText = "Hi, I'm Pavi Punna";
 
     // Mount animation
     useEffect(() => {
