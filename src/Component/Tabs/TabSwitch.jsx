@@ -2,13 +2,13 @@ import React, { useRef, useState, useEffect } from 'react';
 import Project from './Project';
 import Skill from './Skill';
 import ExperienceSection from './Experience';
-import Service from './Service';
+import Certificate from './Certificate';
 
 const TabSwitch = () => {
     const [activeTab, setActiveTab] = useState('Projects');
     const [isLoaded, setIsLoaded] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const tabs = ['Projects',  'Experience', 'Skills'];
+    const tabs = ['Projects', 'Certificates', 'Experiences', 'Skills'];
     const tabContentRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -128,8 +128,9 @@ const TabSwitch = () => {
                 {activeTab === 'Projects' && <Project />}
 
                 {activeTab === 'Skills' &&  <Skill />}
+                {activeTab === 'Certificates' &&  <Certificate />  }
 
-                {activeTab === 'Experience' && <ExperienceSection />}
+                {activeTab === 'Experiences' && <ExperienceSection />}
             </div>
         </div>
     );
