@@ -10,6 +10,8 @@ const Skill = () => {
         // Data Warehouse
         { name: 'Snowflake', category: 'Data Warehouse' },
         { name: 'Microsoft Fabric', category: 'Data Warehouse' },
+        { name: 'Databricks', category: 'Data Warehouse' },
+        { name: 'Apache Spark', category: 'Data Warehouse' },
 
         // Cloud Tech
         { name: 'Microsoft Azure', category: 'Cloud Tech' },
