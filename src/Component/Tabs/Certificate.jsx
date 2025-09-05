@@ -7,6 +7,7 @@ const Certificate = () => {
     const [activeTab, setActiveTab] = useState('technical');
 
     const certificates = [
+        { name: 'Databricks Data Engineer Associate (In-Line)', category: 'Microsoft' },
         { name: 'Fabric Analytics Engineer Associate (DP-600), Microsoft', category: 'Microsoft' },
         { name: 'Snowflake: SnowPro Core Certified', category: 'Snowflake' },
         { name: 'Azure Data Fundamentals (DP-900) , Microsoft', category: 'Microsoft' },
